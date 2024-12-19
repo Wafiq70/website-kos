@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kos Hunting</title>
+    <link rel="stylesheet" href="style-daftar-kos.css" />
+    <style>
+      /* Global Style */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #121212; /* Tema gelap */
+        color: #f4f4f9;
+      }
+
+      header {
+        background-color: #272727; /* Warna gelap untuk header */
+        color: #f4f4f9;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      .kos {
+        color: #ff69b4; /* Warna pink untuk kata "Kos" */
+      }
+
+      .hunting {
+        color: #ffffff;
+      }
+
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      nav a {
+        color: #f4f4f9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #ff69b4; /* Warna pink untuk hover */
+      }
+
+      #search-bar {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #333;
+        color: white;
+        width: 200px;
+      }
+
+      /* Daftar Kos Styling */
+      .daftar-kos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+      }
+
+      .daftar-kos-item {
+        width: 300px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        background: #1e1e1e; /* Warna gelap untuk kartu kos */
+      }
+
+      .kos-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        cursor: pointer; /* Menunjukkan gambar bisa diklik */
+        transition: transform 0.3s ease;
+      }
+
+      .kos-image:hover {
+        transform: scale(1.05); /* Efek zoom saat hover */
+      }
+
+      .kos-info {
+        padding: 15px;
+      }
+
+      .kos-info h2 {
+        margin: 0 0 10px;
+        color: #ff69b4; /* Warna pink untuk judul kos */
+      }
+
+      .kos-info .location,
+      .kos-info .contact {
+        font-size: 14px;
+        color: #ccc;
+      }
+
+      .buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        background: #ff69b4; /* Warna pink untuk tombol */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        text-align: center;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #d758a1; /* Warna pink lebih gelap untuk hover */
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        background-color: #1e1e1e; /* Warna gelap untuk footer */
+        color: white;
+        padding: 1rem;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><span class="kos">Kos</span> <span class="hunting">Hunting</span></h1>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="nav-menu">
+        <a href="#profil" class="menu-item">Tentang Kami</a>
+        <a href="#promo" class="menu-item">Promo</a>
+        <a href="#qa" class="menu-item">Q&A</a>
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Cari nama atau lokasi..."
+          onkeypress="handleSearch(event)"
+        />
+      </nav>
+    </header>
+
+    <!-- Daftar Kos -->
+    <section id="daftar-kos-list" class="daftar-kos">
+      <!-- Kos A -->
+      <div class="daftar-kos-item">
+        <a
+          href="https://www.instagram.com/p/DDjzUV2zx7G/?igsh=bzd3OHljMGt4Ymxm"
+          target="_blank"
+        >
+          <img src="baru/gambar-kos-1.jpg" alt="Kos A" class="kos-image" />
+        </a>
+        <div class="kos-info">
+          <h2>Kos Putri</h2>
+          <p class="location">Sorosutan, Umbulharjo, Kota Yogyakarta</p>
+          <p class="contact">Nomor HP admin 1: 085162631143</p>
+          fasilitas
+          <p class="fasilitas">1. Kamar ukuran-+3x4 m</p>
+          <p class="fasilitas">2. Kamar mandi dalam</p>
+          <p class="fasilitas">
+            3. Free wifi, tersedia dapur umum, kulkas bersama, parkiran khusus
+            motor
+          </p>
+          <div class="buttons">
+            <a
+              href="https://www.google.com/maps/place/Jl.+Sorosutan,+Sorosutan,+Kec.+Umbulharjo,+Kota+Yogyakarta,+Daerah+Istimewa+Yogyakarta"
+              target="_blank"
+              class="btn"
+              >Detail Lokasi</a
+            >
+            <a
+              href="https://wa.me/6285162631143?text=Halo%20saya%20tertarik%20dengan%20Kos%20Mawar"
+              target="_blank"
+              class="btn"
+              >Hubungi via WA</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar Kos -->
+    <section id="daftar-kos-list" class="daftar-kos">
+      <!-- Kos B -->
+      <div class="daftar-kos-item">
+        <a
+          href="https://www.instagram.com/p/DDOuFngz2Gc/?igsh=MWY2eHNnODhscnR1dg=="
+          target="_blank"
+        >
+          <img src="baru/gambar-kos-2.jpg" alt="Kos B" class="kos-image" />
+        </a>
+        <div class="kos-info">
+          <h2>Kos Campur</h2>
+          <p class="location">Krobokan, Tamanan, Banguntapan</p>
+          <p class="contact">Nomor HP admin 1: 085162631143</p>
+          fasilitas
+          <p class="fasilitas">1. Kamar ukuran-+3x4 m</p>
+          <p class="fasilitas">2. Kamar mandi dalam</p>
+          <p class="fasilitas">
+            3. Free wifi, tersedia ruang tamu, jemuran, parkiran khusus motor
+          </p>
+          <div class="buttons">
+            <a
+              href="https://maps.app.goo.gl/VdZckjVcfAVbryiMA"
+              target="_blank"
+              class="btn"
+              >Detail Lokasi</a
+            >
+            <a
+              href="https://wa.me/6285162631143?text=Halo%20saya%20tertarik%20dengan%20Kos%20Mawar"
+              target="_blank"
+              class="btn"
+              >Hubungi via WA</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar Kos -->
+    <section id="daftar-kos-list" class="daftar-kos">
+      <!-- Kos C -->
+      <div class="daftar-kos-item">
+        <a
+          href="https://www.instagram.com/p/DCQsK7TT9iB/?igsh=MThmM3d4NjNza3N3"
+          target="_blank"
+        >
+          <img src="baru/gambar-kos-3.jpg" alt="Kos B" class="kos-image" />
+        </a>
+        <div class="kos-info">
+          <h2>Kos Putra</h2>
+          <p class="location">Ambarketawang, Gamping, Sleman, Yogyakarta</p>
+          <p class="contact">Nomor HP admin 1: 085162631143</p>
+          fasilitas
+          <p class="fasilitas">1. Kamar ukuran-+3x4 m</p>
+          <p class="fasilitas">2. Kamar mandi dalam</p>
+          <p class="fasilitas">
+            3. Free wifi, tersedia ruang tamu, jemuran umum, ruang tamu,
+            parkiran mobil dan motor
+          </p>
+          <div class="buttons">
+            <a
+              href="https://maps.app.goo.gl/d5rxYru7hEug6nnQ9"
+              target="_blank"
+              class="btn"
+              >Detail Lokasi</a
+            >
+            <a
+              href="https://wa.me/6285162631143?text=Halo%20saya%20tertarik%20dengan%20Kos%20Mawar"
+              target="_blank"
+              class="btn"
+              >Hubungi via WA</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Kos Hunting - All Rights Reserved</p>
+    </footer>
+    <script>
+      function handleSearch() {
+        const searchInput = document
+          .getElementById("search-bar")
+          .value.toLowerCase();
+        const kosList = document.getElementById("daftar-kos-list");
+        const kosItems = kosList.getElementsByClassName("daftar-kos-item");
+
+        for (let i = 0; i < kosItems.length; i++) {
+          const kosItem = kosItems[i];
+          const name = kosItem.querySelector("h2").textContent.toLowerCase();
+          const location = kosItem
+            .querySelector(".location")
+            .textContent.toLowerCase();
+
+          if (name.includes(searchInput) || location.includes(searchInput)) {
+            kosItem.style.display = "";
+          } else {
+            kosItem.style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
